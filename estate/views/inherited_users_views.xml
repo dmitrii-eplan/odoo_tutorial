@@ -5,11 +5,20 @@
     <field name="model">res.users</field>
     <field name="inherit_id" ref="base.view_users_form"/>
     <field name="arch" type="xml">
-        <!-- find field description and add the field
-             new_field after it -->
-        <xpath expr="//field[@name='description']" position="after">
-            <page name="Real Estate Properties">
-            <field name="property_ids"/>
+        <xpath expr="//page[@name='preferences']" position="after">
+            <page string="Real Estate Properties" name="real_estate_properties">
+                <field name="property_ids">
+                    <tree string="Real Estate Properties">
+                        <field name="name"/>
+                        <field name="property_type_id"/>
+                        <field name="postcode"/>
+                        <field name="tag_ids"/>
+                        <field name="bedrooms"/>
+                        <field name="living_area"/>
+                        <field name="expected_price"/>
+                        <field name="selling_price"/>
+                    </tree>
+                </field>
             </page>
         </xpath>
     </field>
