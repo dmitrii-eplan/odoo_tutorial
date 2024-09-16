@@ -1,5 +1,3 @@
-from win32ui import types
-
 from odoo import fields, models, api
 from datetime import date, timedelta
 from odoo.exceptions import ValidationError, UserError
